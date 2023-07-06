@@ -1,0 +1,23 @@
+.product{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.productkey{
+    margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+.productimage{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+.productprice{
+    font-weight: bold;
+}
+.productdiscount{
+    color: red;
+}
