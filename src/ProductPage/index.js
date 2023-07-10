@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import './style.css';
 import { Link } from 'react-router-dom';
 
-const Products = () => {
+const Product = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -42,4 +42,4 @@ const Products = () => {
     </div>
   );
 };
-export default Products;
+export default Product;

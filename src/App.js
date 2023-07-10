@@ -19,7 +19,7 @@ function App() {
  {/* <Link to="/add-product">Add Product</Link> */}
               </li>
               <li>
-              <Link to="/">Products</Link>
+              <Link to="/product">Products</Link>
                 
               </li>
               <li>
@@ -29,9 +29,10 @@ function App() {
           </nav>
         </div>
         <Routes>
-          <Route path='/' element={<ProductPage />} />
+        <Route path='/login' element={<Login />} />
+          <Route path='/product' element={<ProductPage />} />
           {/* <Route path='/add-product' element={<AddProduct />} /> */}
-          <Route path='/login' element={<Login />} />
+         
           <Route path='/productdetails/:productId' element={<ProductDetails/>}/>
         </Routes>
       </div>
