@@ -1,27 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Login from './LoginPage';
-import Products from './ProductPage';
-import { BrowserRouter , Routes,Route,Link } from 'react-router-dom';
-import ProductDetails from './MoreProducts';
+import ProductPage from './ProductPage'
+import ProductDetails from './MoreProducts'
+// import AddProduct from './AddProduct'
 function App() {
   return (
-    <div>
-<BrowserRouter>
-      <Link to='/'>Login</Link>
-      <Link to='/product'>Products</Link>
-      <Link to='/'></Link>
-      <Link to='/productdetails'>ProductDetails</Link>
-      <Routes>
-        <Route index element={<Login/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/product' element={<Products/>}/>
-        <Route path='/productdetails/:productId' element={<ProductDetails/>}/>
-      </Routes>
-      </BrowserRouter>
-
-    </div>
+    <Router>
+      <div className='main'>
+        <div className='navbar'>
+          <nav>
+            <ul>
+              <li>
+              <Link to="/login">Login</Link>
+               
+              </li>
+              <li>
+ {/* <Link to="/add-product">Add Product</Link> */}
+              </li>
+              <li>
+              <Link to="/">Products</Link>
+                
+              </li>
+              <li>
+                <Link to="/details">More details</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <Routes>
+          <Route path='/' element={<ProductPage />} />
+          {/* <Route path='/add-product' element={<AddProduct />} /> */}
+          <Route path='/login' element={<Login />} />
+          <Route path='/productdetails/:productId' element={<ProductDetails/>}/>
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
 export default App;

@@ -27,14 +27,16 @@ const Products = () => {
     <div className="product">
      
       {products.map((item) => (
-        <div key={item.id} className="productkey">
+        <div key={item.id} className="key">
        
-          <img  src={item.images[0]} alt={item.title} className="productimage" />
-        <p className="productprice">price &nbsp;ksh{item.price}</p>
-        <p className="productdiscount">discount&nbsp;{item.discountPercentage}%</p>
+        
         <Link to={`/ProductDetails/${item.id}` }className="buton">
-            <button type="submit" className="button">More</button >
+        <img  src={item.images[0]} alt={item.title} className="pimage" />
+
           </Link>
+          <p className="price">Price ksh{item.price}</p>
+          <p className="discount">Discount {item.discountPercentage}%</p>
+      
         </div>
       ))}
     </div>

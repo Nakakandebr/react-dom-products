@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.navbar {
+  background-color: #087f5b;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+.navbar nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar nav ul li {
+  display: inline-block;
+  margin-left: 10%;
+}
+.navbar nav ul li a {
+  text-decoration: none;
+  font-size: 25px;
+  color:white;
+  padding: 15px 20px;
+}
+.navbar nav ul li a:hover {
+  background-color:#66a80f;
+}

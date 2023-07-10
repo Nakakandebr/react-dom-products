@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 import { useParams } from 'react-router-dom';
 const ProductDetails = () => {
+      
   const {productId} = useParams();
-
   const [product, setProduct] = useState(null);
   useEffect(() => {
     const details = async () => {
@@ -23,7 +23,7 @@ const ProductDetails = () => {
   }
   return (
     <div>
-      <h1>Product Details</h1>
+      <h1 className='details'>Product Details</h1>
       <div className='products'>
         <img src={product.thumbnail} alt={product.title} className="" />
         <h2>{product.title}</h2>
