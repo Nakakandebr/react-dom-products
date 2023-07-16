@@ -1,0 +1,23 @@
+.form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form >input{
+    padding:12px 20px;
+    width: 70%;
+    border: solid 2px rgb(237, 17, 17);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+
+.but{
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    background-color: rgb(6, 69, 16);
+    border-radius: 5px;
+    color: white;
+}

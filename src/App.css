@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+.navbar{
+  background: #11440a;
+  padding: 30px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  
+  
+   
+   
+   
+ }
+ .links {
+  
+ text-decoration: none;
+ padding-left: 20px;
+ cursor: pointer;
+ color: rgb(232, 230, 241);
+ text-transform: capitalize;
+  
+   
+ }
+ 

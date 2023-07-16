@@ -1,42 +1,38 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-import Login from './LoginPage';
-import ProductPage from './ProductPage'
-import ProductDetails from './MoreProducts'
-// import AddProduct from './AddProduct'
+import Products from './Products';
+
+import Form from './Form';
+import ProductDetailsPage from './DisplayProduct';
+import Login from './Login';
+import { BrowserRouter,Routes,Route, Link } from "react-router-dom";
+
+
 function App() {
   return (
-    <Router>
-      <div className='main'>
-        <div className='navbar'>
-          <nav>
-            <ul>
-              <li>
-              <Link to="/login">Login</Link>
-               
-              </li>
-              <li>
- {/* <Link to="/add-product">Add Product</Link> */}
-              </li>
-              <li>
-              <Link to="/product">Products</Link>
-                
-              </li>
-              <li>
-                <Link to="/details">More details</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <Routes>
-        <Route path='/login' element={<Login />} />
-          <Route path='/product' element={<ProductPage />} />
-          {/* <Route path='/add-product' element={<AddProduct />} /> */}
-         
-          <Route path='/productdetails/:productId' element={<ProductDetails/>}/>
+    <div >
+    <BrowserRouter>
+      <nav  className="navbar">
+       
+       <Link  className="links" to="/">Home</Link>
+      
+       <Link  className="links" to="/information/:productId">ProductDetails</Link>
+       <Link  className="links" to="/form">Form</Link>
+       <Link  className="links" to="/login">Login</Link>
+
+       </nav>
+     
+     
+      <Routes>
+       <Route index element={<Products/>}/>
+       <Route path='/home' element={<Products/>}/>
+       <Route path='/information/:productId' element={<ProductDetailsPage/>}/>
+       <Route path='/form' element={<Form/>}/>
+       <Route path='/login' element={<Login/>}/>
+
         </Routes>
-      </div>
-    </Router>
-  );
+        </BrowserRouter> 
+    </div>
+  ); 
 }
+
 export default App;
