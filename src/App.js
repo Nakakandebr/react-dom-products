@@ -23,11 +23,12 @@ function App() {
      
      
       <Routes>
-       <Route index element={<Products/>}/>
+       <Route path ='/' element={<Products/>}/>
        <Route path='/home' element={<Products/>}/>
        <Route path='/information/:productId' element={<ProductDetailsPage/>}/>
        <Route path='/form' element={<Form/>}/>
        <Route path='/login' element={<Login/>}/>
+       
 
         </Routes>
         </BrowserRouter> 

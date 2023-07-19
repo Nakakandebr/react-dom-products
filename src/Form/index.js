@@ -47,28 +47,28 @@ const Form = () => {
       <form className="form" onSubmit={handleSubmit}>
         <h1>Add</h1>
         <input
-          placeholder="Name"
+          placeholder="Title"
           type="text"
           onChange={(e) => setProduct(e.target.value)}
         />
         <br />
         <br />
         <input
-          placeholder="Price"
+          placeholder="Product Name"
           type="text"
           onChange={(e) => setPrice(e.target.value)}
         />
         <br />
         <br />
         <input
-          placeholder="Brand"
+          placeholder="Product Description"
           type="text"
           onChange={(e) => setBrand(e.target.value)}
         />
         <br />
         <br />
         <input
-          placeholder="Other information"
+          placeholder="Percentage of the Product"
           type="text"
           onChange={(e) => setDescription(e.target.value)}
         />
@@ -80,7 +80,9 @@ const Form = () => {
         <Link to={{ pathname: '/home', state: { image } }}>
           <button className="but" type="submit">Add</button>
         </Link>
-      </form>setIsSubmitted(true);
+
+      </form>
+
       
     </div>
   );
