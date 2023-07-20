@@ -28,6 +28,8 @@ function App() {
        <Route path='/information/:productId' element={<ProductDetailsPage/>}/>
        <Route path='/form' element={<Form/>}/>
        <Route path='/login' element={<Login/>}/>
+       <Route path="*" element={<h1>Page Not Found</h1>} />
+      
        
 
         </Routes>
